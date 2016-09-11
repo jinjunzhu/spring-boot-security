@@ -1,0 +1,30 @@
+sec_user
+
+CREATE TABLE `sec_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
+
+数据:
+insert into sec_user values(1,'user','password')
+insert into sec_user values(2,'user1','password')
+
+
+
+sec_user_role
+
+CREATE TABLE `sec_user_role` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `role` varchar(64) NOT NULL,
+  `userid` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
+
+数据:
+insert into sec_user_role values(1,'ROLE_USER',1)
+insert into sec_user_role values(2,'ROLE_USER',2)
+
+
+
